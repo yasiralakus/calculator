@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a { text-decoration: none; }
+
+li, summary { list-style: none;}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Poppins', sans-serif;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+/* hazır kodlarım */
+
+.full-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(./img/bg-white.png);
+    background-size: cover;
+    background-color: #F8FAFC;
+    position: relative;
+}
+
+.darkmode {
+    width: 80px;
+    height: 40px;
+    background-color: #0F172A;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.header {
+    background-color: #fff;
+    padding: 32px;
+    width: 100%;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(60, 72, 88, 0.15) 0px 0px 3px 0px;
+    > h3 {
+        font-weight: 400;
+    }
+}
+
+.footer {
+    background-color: #fff;
+    padding: 32px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    box-shadow:rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(60, 72, 88, 0.15) 0px 0px 3px 0px;
+    > p {
+        font-weight: 400;
+        > a {
+            font-weight: 600;
+            color: #0F172A;
+        }
+        > a:hover {
+            text-decoration: underline;
+        }
+    }
+    > ul {
+        display: flex;
+        gap: 16px;
+        > li {
+            display: block;
+            > a {
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background-color: #0F172A;
+                color: #fff;
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}
+
+.container {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 24px;
+    gap: 24px;
+    border-radius: 32px;
+    border: 1px solid #cccccc;
+}
+
+.result-box {
+    display: flex;
+    justify-content: end;
+    background-color: #F8FAFC;
+    padding: 16px;
+    border: 1px solid #cccccc;
+    height: 68px;
+    > h3 {
+        font-size: 34px;
+        line-height: 1;
+        font-weight: 500;
+    }
+}
+
+.button-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    > button {
+        height: 50px;
+        font-size: 24px;
+        font-weight: 600;
+        border: none;
+        background-color: #F8FAFC;
+        border: 1px solid #cccccc;
+        cursor: pointer;
+        font-weight: 500;
+
+        > i {
+            user-select: none;
+        }
+    }
+    > button:hover {
+        background-color: #e6e6e6;
+    }
+    > button:disabled {
+        cursor: not-allowed;
+    }
+}
+
+.red {
+    background-color: #dc2626 !important;
+    color: #fff;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+@media (width < 800px) {
+
+    .footer {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+
+}
+
+@media (width < 500px) {
+
+    .header {
+        padding: 16px;
+        > h3 {
+            font-size: 18px;
+        }
+    }
+
+    .footer {
+        padding: 16px;
+        > p {
+            font-size: 14px;
+        }
+        > ul {
+            gap: 8px;
+        }
+    }
+
+    .main {
+        padding: 32px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+}
