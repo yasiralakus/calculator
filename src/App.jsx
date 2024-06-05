@@ -54,29 +54,29 @@ export default function App() {
     useEffect(() => {
         function handleCalculate() {
             if(islem === 'topla') {
-                setText(parseFloat(number1) + parseFloat(number2));
-                setNumber1(parseFloat(number1) + parseFloat(number2))
+                setText((parseFloat(number1) + parseFloat(number2)).toFixed(2));
+                setNumber1((parseFloat(number1) + parseFloat(number2)).toFixed(2));
                 setNumber2('')
                 setIslem('')
                 setComplete(false)
             }
             if(islem === 'çıkar') {
-                setText(parseFloat(number1) - parseFloat(number2));
-                setNumber1(parseFloat(number1) - parseFloat(number2))
+                setText((parseFloat(number1) - parseFloat(number2)).toFixed(2));
+                setNumber1((parseFloat(number1) - parseFloat(number2)).toFixed(2));
                 setNumber2('')
                 setIslem('')
                 setComplete(false)
             }
             if(islem === 'çarp') {
-                setText(parseFloat(number1) * parseFloat(number2));
-                setNumber1(parseFloat(number1) * parseFloat(number2))
+                setText((parseFloat(number1) * parseFloat(number2)).toFixed(2));
+                setNumber1((parseFloat(number1) * parseFloat(number2)).toFixed(2));
                 setNumber2('')
                 setIslem('')
                 setComplete(false)
             }
             if(islem === 'böl') {
-                setText(parseFloat(number1) / parseFloat(number2));
-                setNumber1(parseFloat(number1) / parseFloat(number2))
+                setText((parseFloat(number1) / parseFloat(number2)).toFixed(2));
+                setNumber1((parseFloat(number1) / parseFloat(number2)).toFixed(2));
                 setNumber2('')
                 setIslem('')
                 setComplete(false)
