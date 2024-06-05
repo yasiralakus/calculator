@@ -54,29 +54,37 @@ export default function App() {
     useEffect(() => {
         function handleCalculate() {
             if(islem === 'topla') {
-                setText((parseFloat(number1) + parseFloat(number2)).toFixed(2));
-                setNumber1((parseFloat(number1) + parseFloat(number2)).toFixed(2));
+                const result = parseFloat(number1) + parseFloat(number2);
+                const formattedResult = result % 1 === 0 ? result.toFixed(0) : result.toFixed(1);
+                setText(formattedResult);
+                setNumber1(formattedResult);
                 setNumber2('')
                 setIslem('')
                 setComplete(false)
             }
             if(islem === 'çıkar') {
-                setText((parseFloat(number1) - parseFloat(number2)).toFixed(2));
-                setNumber1((parseFloat(number1) - parseFloat(number2)).toFixed(2));
+                const result = parseFloat(number1) - parseFloat(number2);
+                const formattedResult = result % 1 === 0 ? result.toFixed(0) : result.toFixed(1);
+                setText(formattedResult);
+                setNumber1(formattedResult);
                 setNumber2('')
                 setIslem('')
                 setComplete(false)
             }
             if(islem === 'çarp') {
-                setText((parseFloat(number1) * parseFloat(number2)).toFixed(2));
-                setNumber1((parseFloat(number1) * parseFloat(number2)).toFixed(2));
+                const result = parseFloat(number1) * parseFloat(number2);
+                const formattedResult = result % 1 === 0 ? result.toFixed(0) : result.toFixed(1);
+                setText(formattedResult);
+                setNumber1(formattedResult);
                 setNumber2('')
                 setIslem('')
                 setComplete(false)
             }
             if(islem === 'böl') {
-                setText((parseFloat(number1) / parseFloat(number2)).toFixed(2));
-                setNumber1((parseFloat(number1) / parseFloat(number2)).toFixed(2));
+                const result = parseFloat(number1) / parseFloat(number2);
+                const formattedResult = result % 1 === 0 ? result.toFixed(0) : result.toFixed(1);
+                setText(formattedResult);
+                setNumber1(formattedResult);
                 setNumber2('')
                 setIslem('')
                 setComplete(false)
